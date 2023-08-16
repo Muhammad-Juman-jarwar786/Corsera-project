@@ -27,6 +27,7 @@ const Budget = () => {
           <input
             className="text-xl text-gray-700 outline-none border-2 border-slate-400 rounded-lg w-48"
             type="number"
+            step={10}
           />
         </div>
         <div className="bg-slate-400 p-4 w-80 flex rounded-lg text-xl">
@@ -47,11 +48,11 @@ const Budget = () => {
           }
           )
           <i
-            className="fa-solid fa-angle-down mt-2 cursor-pointer text-black"
+            className="fa-solid fa-angle-down mt-2 ml-3 cursor-pointer text-black"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           ></i>
           <div
-            className={`bg-transparent outline-none ${
+            className={`bg-transparent mt-2 border-2 border-slate-800 outline-none ${
               isMenuOpen ? 'block' : 'hidden'
             } absolute top-14`}
           >
@@ -72,7 +73,26 @@ const Budget = () => {
       <div className="mt-10">
         <div className="text-3xl">Allocation</div>
       </div>
-      <div></div>
+      <table className="w-full mt-10 text-xl font-bold">
+        <thead>
+          <tr>
+            <th className="w-1/5">Department</th>
+            <th className="w-1/5">Allocated Budget</th>
+            <th className="w-1/5">Increase By 10</th>
+            <th className="w-1/5">Decrease By 10</th>
+            <th className="w-1/5">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="w-1/5"></td>
+            <td className="w-1/5"></td>
+            <td className="w-1/5"></td>
+            <td className="w-1/5"></td>
+            <td className="w-1/5"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
